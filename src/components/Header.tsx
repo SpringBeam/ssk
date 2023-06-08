@@ -8,7 +8,9 @@ interface HeaderProps {
 const Header = ({ text }: HeaderProps) => {
   return (
     <HeaderView>
-      <Text>{text}</Text>
+      <Text>
+        {text}
+      </Text>
     </HeaderView>
   );
 };

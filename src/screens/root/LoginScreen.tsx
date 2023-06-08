@@ -4,7 +4,10 @@ import styled from "styled-components/native";
 import queryString from "query-string";
 import { setAccessToken, setAuthentication } from "../../utils/Auth";
 
+import Layout from "../../components/Layout";
+import Header from "../../components/Header";
 import Margin from "../../components/Margin";
+import OAuthLoginButton from "../../components/login/OAuthLoginButton";
 
 const LoginScreen: React.FC = () => {
 
@@ -26,7 +29,7 @@ const LoginScreen: React.FC = () => {
           console.log('로그인 결과값은 다음과 같습니다.', url, accessToken, refreshToken);
           if (accessToken) {
             setTimeout(() => {
-              console.log("잘 된다!")
+              console.log("로그인 값을 잘 가져왔다!")
             }, 3000);
           }
         }
@@ -39,6 +42,15 @@ const LoginScreen: React.FC = () => {
 
   return (
     <>
+    <Layout>
+      <Header text="로그인하기" />
+      <Container>
+        <OAuthLoginButton
+          isClicked={isClicked}
+          setIsClicked={setIsClicked}
+        />
+      </Container>
+    </Layout>
     </>
   );
 };
@@ -50,7 +62,7 @@ const Container = styled.View`
   flex: 1;
   display: flex;
   flexDirection: column;
-  justifyContent: space-between;
-  marginHorizontal: 15px;
+  justifyContent: center;
   alignItems: center;
+  marginHorizontal: 15px;
 `;

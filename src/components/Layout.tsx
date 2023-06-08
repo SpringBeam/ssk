@@ -22,6 +22,6 @@ const Wrapper = styled(SafeAreaView)`
 const Inner = styled.View`
   width: 100%;
   flex: 1;
-  background-color: white;
+  background-color: #f8f9fa;
 `;
 export default Layout;
