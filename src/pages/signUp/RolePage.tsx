@@ -138,8 +138,3 @@ const DescText = styled.Text`
   color: #696969;
 `;
 
-const ProgressButton = styled.TouchableOpacity`
-  width: 40px;
-  height: 40px;
-  activeOpacity: 0.8;
-`;

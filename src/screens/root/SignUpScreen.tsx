@@ -3,6 +3,7 @@ import { View } from "react-native";
 import Layout from "../../components/Layout";
 import Header from "../../components/Header";
 import RolePage from "../../pages/signUp/RolePage";
+import ProgressButton from "../../components/signUp/ProgressButton";
 
 const SignUpScreen = () => {
   const [page, setPage] = useState("RolePage");
@@ -23,6 +24,9 @@ const SignUpScreen = () => {
       <Header text="회원가입" type="withBack"/>
       <View>
         {pageComponent}
+      </View>
+      <View>
+        <ProgressButton page={page} />
       </View>
     </Layout>
   );

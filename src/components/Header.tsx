@@ -35,7 +35,7 @@ const Header = ({ text, type }: HeaderProps) => {
           <TouchableArea
             onPress={handleBackButton}
           >
-            <Ionicons name="caret-back" size={24} color="#fff" />
+            <Ionicons name="chevron-back-outline" size={30} color="#fff" />
           </TouchableArea>
           <Text>
             {text}
@@ -50,13 +50,13 @@ const Header = ({ text, type }: HeaderProps) => {
           <TouchableArea
             onPress={handleBackButton}
           >
-            <Ionicons name="caret-back" size={24} color="#fff" />
+            <Ionicons name="caret-back" size={30} color="#fff" />
           </TouchableArea>
           <Text>
             {text}
           </Text>
           <TouchableArea>
-            <Ionicons name="caret-forward" size={24} color="#fff" />
+            <Ionicons name="caret-forward" size={30} color="#fff" />
           </TouchableArea>
         </>
       );
@@ -100,8 +100,8 @@ const Text = styled.Text`
 
 const TouchableArea = styled.TouchableOpacity`
   activeOpacity: 0.8;
-  width: 24px;
-  height: 24px;
+  width: 30px;
+  height: 30px;
   display: flex;
   flexDirection: row;
   justifyContent: space-between;
@@ -109,8 +109,8 @@ const TouchableArea = styled.TouchableOpacity`
 `;
 
 const UntouchableArea = styled.View`
-  width: 24px;
-  height: 24px;
+  width: 30px;
+  height: 30px;
   display: flex;
   flexDirection: row;
   justifyContent: space-between;
