@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Text } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import * as Font from "expo-font";
@@ -37,7 +38,9 @@ export default function App() {
   return (
     <>
       <SafeAreaProvider>
-        <NavigationContainer>
+        <NavigationContainer
+          fallback={<Text>Loading...</Text>}
+        >
           <RootNavigator />
         </NavigationContainer>
       </SafeAreaProvider>

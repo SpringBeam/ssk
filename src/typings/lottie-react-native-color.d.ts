@@ -1,0 +1,1 @@
+declare module '@killerwink/lottie-react-native-color';
