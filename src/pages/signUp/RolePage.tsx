@@ -2,9 +2,12 @@ import React, { useState, useRef } from "react";
 import styled from "styled-components/native";
 import LottieView from "lottie-react-native";
 
-const RolePage = () => {
-  const [role, setRole] = useState("Tutor");
+interface RolePageProps {
+  role: string;
+  setRole: React.Dispatch<React.SetStateAction<string>>;
+}
 
+const RolePage = ({role, setRole}: RolePageProps) => {
   const handleTutorButton = () => {
     setRole("Tutor");
   };
